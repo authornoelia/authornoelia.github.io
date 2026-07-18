@@ -2,15 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Página web oficial de Noelia Acuña, autora de fantasía romántica juvenil."
+    content="Página web oficial de Noelia Acuña, autora de fantasía romántica juvenil y de Cuento de Lirios / Tale of Lilies."
   >
 
   <title>Noelia Acuña | Autora</title>
@@ -22,6 +18,7 @@
       --lila-oscuro: #76558f;
       --texto: #29242d;
       --blanco: #ffffff;
+      --borde: #e9dff4;
     }
 
     * {
@@ -51,8 +48,8 @@
 
     nav {
       align-items: center;
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid #eee8f5;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--borde);
       display: flex;
       justify-content: space-between;
       left: 0;
@@ -95,12 +92,7 @@
 
     .inicio {
       align-items: center;
-      background:
-        linear-gradient(
-          135deg,
-          var(--lila-claro),
-          var(--blanco)
-        );
+      background: linear-gradient(135deg, var(--lila-claro), var(--blanco));
       display: flex;
       justify-content: center;
       min-height: 100vh;
@@ -156,8 +148,8 @@
     }
 
     .seccion-introduccion {
-      margin: 0 auto 50px;
-      max-width: 700px;
+      margin: 0 auto 60px;
+      max-width: 760px;
       text-align: center;
     }
 
@@ -165,24 +157,35 @@
       background: var(--blanco);
     }
 
+    .lista-libros {
+      display: grid;
+      gap: 90px;
+      margin: auto;
+      max-width: 1100px;
+    }
+
     .libro {
-      align-items: center;
+      align-items: start;
       display: grid;
       gap: 60px;
-      grid-template-columns: minmax(220px, 350px) 1fr;
-      margin: auto;
-      max-width: 1000px;
+      grid-template-columns: minmax(220px, 340px) 1fr;
+    }
+
+    .libro:nth-child(even) .portada-provisional {
+      order: 2;
+    }
+
+    .libro:nth-child(even) .libro-info {
+      order: 1;
     }
 
     .portada-provisional {
       align-items: center;
       aspect-ratio: 2 / 3;
-      background:
-        linear-gradient(
-          145deg,
-          var(--lila),
-          var(--lila-oscuro)
-        );
+      justify-self: center;
+      max-width: 340px;
+      width: 100%;
+      background: linear-gradient(145deg, var(--lila), var(--lila-oscuro));
       box-shadow: 0 18px 45px rgba(62, 42, 77, 0.2);
       color: var(--blanco);
       display: flex;
@@ -194,20 +197,29 @@
     }
 
     .libro-info h3 {
-      font-size: 2.3rem;
-      margin-bottom: 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
     }
 
-    .libro-idiomas {
+    .libro-idioma {
       color: var(--lila-oscuro);
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      margin-bottom: 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 22px;
       text-transform: uppercase;
     }
 
-    .libro-info p {
-      margin-bottom: 28px;
+    .sinopsis p {
+      margin-bottom: 18px;
+    }
+
+    .cita {
+      border-left: 3px solid var(--lila);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      margin: 28px 0;
+      padding-left: 20px;
     }
 
     .sobre-mi {
@@ -235,7 +247,7 @@
       font-size: 0.85rem;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       nav {
         flex-direction: column;
         gap: 12px;
@@ -259,21 +271,24 @@
         grid-template-columns: 1fr;
       }
 
+      .libro:nth-child(even) .portada-provisional,
+      .libro:nth-child(even) .libro-info {
+        order: initial;
+      }
+
       .portada-provisional {
         margin: auto;
         max-width: 280px;
-        width: 100%;
       }
 
       .libro-info {
-        text-align: center;
+        text-align: left;
       }
     }
   </style>
 </head>
 
 <body>
-
   <nav>
     <a class="logo" href="#inicio">Noelia Acuña</a>
 
@@ -288,52 +303,120 @@
   <main>
     <section class="inicio" id="inicio">
       <div class="inicio-contenido">
-        <p class="inicio-etiqueta">
-          Fantasía romántica juvenil
-        </p>
+        <p class="inicio-etiqueta">Fantasía romántica juvenil</p>
 
         <h1>Noelia Acuña</h1>
 
         <p class="inicio-texto">
-          Historias de magia, amor y mundos donde
-          cada decisión puede cambiarlo todo.
+          Historias de magia, amor y mundos donde cada decisión
+          puede cambiarlo todo.
         </p>
 
-        <a class="boton" href="#libros">
-          Descubrir mi libro
-        </a>
+        <a class="boton" href="#libros">Descubrir mis libros</a>
       </div>
     </section>
 
     <section class="libros" id="libros">
-      <h2 class="seccion-titulo">Mi libro</h2>
+      <h2 class="seccion-titulo">Mis libros</h2>
 
       <p class="seccion-introduccion">
-        Una historia de fantasía romántica juvenil
-        disponible en español y en inglés.
+        Descubre la historia de Delaira en español y en inglés.
       </p>
 
-      <div class="libro">
-        <div class="portada-provisional">
-          Aquí pondremos la portada de tu libro
-        </div>
+      <div class="lista-libros">
+        <article class="libro">
+          <div class="portada-provisional">
+            Portada de<br>Cuento de Lirios
+          </div>
 
-        <div class="libro-info">
-          <p class="libro-idiomas">
-            Disponible en español e inglés
-          </p>
+          <div class="libro-info">
+            <p class="libro-idioma">Edición en español</p>
+            <h3>Cuento de Lirios</h3>
 
-          <h3>Título del libro</h3>
+            <div class="sinopsis">
+              <p>
+                Delaira tiene veinte años y un pasado del que lleva
+                demasiado tiempo intentando huir. Cuando participa en
+                un sorteo que promete cambiar su vida, cree que por fin
+                tendrá la oportunidad de dejar atrás su pequeño y
+                tranquilo pueblo pesquero.
+              </p>
 
-          <p>
-            Aquí añadiremos una sinopsis breve y atractiva
-            para presentar la historia sin revelar demasiado.
-          </p>
+              <p>
+                Pero lo que la espera al otro lado es mucho más peligroso
+                de lo que imaginaba: rebeldes dispuestos a todo, una
+                princesa caprichosa y un entramado de conspiraciones que
+                la arrastrarán a un mundo donde nada es lo que parece.
+              </p>
 
-          <a class="boton" href="#">
-            Más información
-          </a>
-        </div>
+              <p>
+                En medio del caos aparece él, un chico de ojos color
+                caramelo y un nombre tan escurridizo como el viento, que
+                la guiará hacia una verdad imposible de ignorar… y hacia
+                una magia que supera cualquier cuento de su infancia.
+              </p>
+
+              <p>
+                Porque cuando la verdad y la mentira comienzan a
+                confundirse, Delaira tendrá que decidir en quién confiar.
+                Mientras antiguos poderes despiertan, descubrirá que su
+                destino podría cambiar no solo su vida… sino el futuro de
+                todo un reino.
+              </p>
+            </div>
+
+            <blockquote class="cita">
+              «El infierno es verde esmeralda.»
+            </blockquote>
+
+            <a class="boton" href="#">Comprar</a>
+          </div>
+        </article>
+
+        <article class="libro">
+          <div class="portada-provisional">
+            Cover of<br>Tale of Lilies
+          </div>
+
+          <div class="libro-info">
+            <p class="libro-idioma">English edition</p>
+            <h3>Tale of Lilies</h3>
+
+            <div class="sinopsis">
+              <p>
+                When twenty-year-old Delaira enters a life-changing
+                raffle, she seeks not only escape from her haunting past
+                but also a glimpse beyond her quiet fishing village.
+              </p>
+
+              <p>
+                What she finds instead shatters expectations: dangerous
+                rebels, a capricious princess, and political schemes
+                drawing her into a journey she never imagined. At its
+                core is a boy with caramel eyes and a name as elusive as
+                the wind, leading her into a world where magic transcends
+                her mother’s bedtime tales.
+              </p>
+
+              <p>
+                As truth and deception blur, Delaira must confront the
+                myths and legends shaping her crumbling reality. Bound by
+                love, loyalty, and awakening ancient powers, she embarks
+                on a path that could reshape not just her destiny but the
+                entire kingdom’s future.
+              </p>
+            </div>
+
+            <blockquote class="cita">
+              “Once upon a time, when the sun was emerald and the moon
+              its companion, the world thrived in enchanting harmony.
+              Earth was the shared realm of Goddesses and humans alike,
+              a tapestry woven by magic and love.”
+            </blockquote>
+
+            <a class="boton" href="#">Buy</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -342,10 +425,9 @@
         <h2 class="seccion-titulo">Sobre mí</h2>
 
         <p>
-          Soy Noelia Acuña, autora de fantasía romántica
-          juvenil. Aquí añadiremos una biografía profesional
-          que presente tu trayectoria, tus influencias y el
-          tipo de historias que deseas compartir con tus lectores.
+          Soy Noelia Acuña, autora de fantasía romántica juvenil.
+          Próximamente añadiremos aquí una biografía profesional,
+          junto con tu fotografía.
         </p>
       </div>
     </section>
@@ -354,8 +436,7 @@
       <h2 class="seccion-titulo">Contacto</h2>
 
       <p class="seccion-introduccion">
-        Para consultas profesionales, prensa, eventos
-        y colaboraciones.
+        Para consultas profesionales, prensa, eventos y colaboraciones.
       </p>
 
       <a class="boton" href="mailto:tu-correo@ejemplo.com">
@@ -365,10 +446,7 @@
   </main>
 
   <footer>
-    <p>
-      © 2026 Noelia Acuña. Todos los derechos reservados.
-    </p>
+    <p>© 2026 Noelia Acuña. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
