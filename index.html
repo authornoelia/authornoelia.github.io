@@ -6,493 +6,130 @@
 
   <meta
     name="description"
-    content="Página web oficial de Noelia Acuña Perdomo, autora de fantasía romántica juvenil y de Cuento de Lirios y Tale of Lilies."
+    content="Página web oficial de Noelia Acuña Perdomo, autora de fantasía romántica juvenil."
   >
 
   <title>Noelia Acuña | Autora de fantasía romántica juvenil</title>
 
-  <style>
-    :root {
-      --fondo: #fffdfd;
-      --lila-muy-claro: #f8f3fb;
-      --lila-claro: #eadcf2;
-      --lila: #b995cb;
-      --lila-oscuro: #68476f;
-      --ciruela: #312637;
-      --texto: #302b32;
-      --texto-suave: #655d68;
-      --blanco: #ffffff;
-      --borde: rgba(104, 71, 111, 0.16);
-      --sombra: 0 22px 55px rgba(49, 38, 55, 0.14);
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--fondo);
-      color: var(--texto);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.75;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: var(--ciruela);
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-      line-height: 1.15;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    nav {
-      align-items: center;
-      backdrop-filter: blur(12px);
-      background: rgba(255, 253, 253, 0.9);
-      border-bottom: 1px solid var(--borde);
-      display: flex;
-      justify-content: space-between;
-      left: 0;
-      padding: 17px 7%;
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      color: var(--ciruela);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-    }
-
-    .menu {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .menu a {
-      color: var(--texto);
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    .menu a:hover,
-    .redes a:hover {
-      color: var(--lila-oscuro);
-    }
-
-    section {
-      padding: 110px 8%;
-      scroll-margin-top: 74px;
-    }
-
-    .inicio {
-      align-items: center;
-      background:
-        radial-gradient(circle at 15% 25%, rgba(185, 149, 203, 0.2), transparent 30%),
-        radial-gradient(circle at 88% 70%, rgba(234, 220, 242, 0.72), transparent 32%),
-        linear-gradient(135deg, var(--lila-muy-claro), var(--fondo));
-      display: grid;
-      min-height: 100vh;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-    }
-
-    .inicio::before,
-    .inicio::after {
-      border: 1px solid rgba(104, 71, 111, 0.15);
-      border-radius: 50%;
-      content: "";
-      position: absolute;
-    }
-
-    .inicio::before {
-      height: 330px;
-      left: -150px;
-      top: 130px;
-      width: 330px;
-    }
-
-    .inicio::after {
-      bottom: -180px;
-      height: 420px;
-      right: -160px;
-      width: 420px;
-    }
-
-    .inicio-contenido {
-      margin: auto;
-      max-width: 850px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .inicio-etiqueta,
-    .libro-idioma,
-    .sobre-etiqueta {
-      color: var(--lila-oscuro);
-      font-size: 0.78rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-
-    .inicio-etiqueta {
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-size: clamp(3.5rem, 9vw, 7.2rem);
-      margin-bottom: 22px;
-    }
-
-    .inicio-texto {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.15rem, 2.4vw, 1.65rem);
-      font-style: italic;
-      margin: 0 auto 38px;
-      max-width: 720px;
-    }
-
-    .boton {
-      background: var(--lila-oscuro);
-      border: 1px solid var(--lila-oscuro);
-      color: var(--blanco);
-      display: inline-block;
-      font-size: 0.78rem;
-      letter-spacing: 0.11em;
-      padding: 14px 24px;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.2s ease;
-    }
-
-    .boton:hover {
-      background: transparent;
-      color: var(--lila-oscuro);
-      transform: translateY(-2px);
-    }
-
-    .seccion-titulo {
-      font-size: clamp(2.6rem, 5vw, 4.5rem);
-      margin-bottom: 18px;
-      text-align: center;
-    }
-
-    .seccion-introduccion {
-      color: var(--texto-suave);
-      margin: 0 auto 70px;
-      max-width: 760px;
-      text-align: center;
-    }
-
-    .libros {
-      background: var(--blanco);
-    }
-
-    .lista-libros {
-      display: grid;
-      gap: 110px;
-      margin: auto;
-      max-width: 1160px;
-    }
-
-    .libro {
-      align-items: center;
-      display: grid;
-      gap: 70px;
-      grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
-    }
-
-    .libro:nth-child(even) .marco-portada {
-      order: 2;
-    }
-
-    .libro:nth-child(even) .libro-info {
-      order: 1;
-    }
-
-    /*
-      Los dos mockups usan exactamente el mismo marco:
-      mismo ancho, misma altura y object-fit: contain.
-      Por eso ninguno aparece mayor que el otro.
-    */
-    .marco-portada {
-      align-items: center;
-      display: flex;
-      height: 560px;
-      justify-content: center;
-      justify-self: center;
-      max-width: 420px;
-      padding: 12px;
-      width: 100%;
-    }
-
-    .marco-portada img {
-      height: 100%;
-      object-fit: contain;
-      width: 100%;
-    }
-
-    .libro-info h3 {
-      font-size: clamp(2.4rem, 4vw, 3.6rem);
-      margin: 12px 0 24px;
-    }
-
-    .sinopsis p {
-      margin-bottom: 18px;
-    }
-
-    .cita {
-      border-left: 3px solid var(--lila);
-      color: var(--ciruela);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.12rem;
-      font-style: italic;
-      margin: 30px 0;
-      padding-left: 22px;
-    }
-
-    .sobre-mi {
-      background: var(--lila-muy-claro);
-    }
-
-    .sobre-grid {
-      align-items: center;
-      display: grid;
-      gap: 70px;
-      grid-template-columns: minmax(270px, 410px) minmax(0, 1fr);
-      margin: auto;
-      max-width: 1120px;
-    }
-
-    .foto-autora {
-      border-radius: 48% 48% 8px 8px;
-      box-shadow: var(--sombra);
-      height: 560px;
-      object-fit: cover;
-      object-position: center top;
-      width: 100%;
-    }
-
-    .sobre-etiqueta {
-      margin-bottom: 14px;
-    }
-
-    .sobre-texto h2 {
-      font-size: clamp(2.7rem, 5vw, 4.5rem);
-      margin-bottom: 28px;
-    }
-
-    .sobre-texto p {
-      margin-bottom: 18px;
-    }
-
-    .contacto {
-      background:
-        linear-gradient(rgba(255, 253, 253, 0.9), rgba(255, 253, 253, 0.9)),
-        radial-gradient(circle, var(--lila-claro), transparent 68%);
-      text-align: center;
-    }
-
-    .contacto-contenido {
-      margin: auto;
-      max-width: 760px;
-    }
-
-    .contacto .boton {
-      margin-bottom: 28px;
-    }
-
-    .redes {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-    }
-
-    .redes a {
-      color: var(--ciruela);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer {
-      background: var(--ciruela);
-      color: var(--blanco);
-      padding: 35px 8%;
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 850px) {
-      nav {
-        flex-direction: column;
-        gap: 11px;
-        padding: 13px 5%;
-      }
-
-      .menu {
-        gap: 14px;
-      }
-
-      .menu a {
-        font-size: 0.67rem;
-      }
-
-      section {
-        padding: 90px 7%;
-        scroll-margin-top: 105px;
-      }
-
-      .libro,
-      .sobre-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .libro:nth-child(even) .marco-portada,
-      .libro:nth-child(even) .libro-info {
-        order: initial;
-      }
-
-      .marco-portada {
-        height: 480px;
-        max-width: 350px;
-      }
-
-      .foto-autora {
-        height: auto;
-        margin: auto;
-        max-width: 430px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .menu {
-        gap: 9px;
-      }
-
-      .menu a {
-        font-size: 0.59rem;
-        letter-spacing: 0.07em;
-      }
-
-      .marco-portada {
-        height: 410px;
-        max-width: 300px;
-      }
-
-      .redes {
-        flex-direction: column;
-        gap: 8px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <nav>
-    <a class="logo" href="#inicio">Noelia Acuña</a>
+  <header class="cabecera">
+    <a class="logo" href="#inicio" aria-label="Ir al inicio">
+      Noelia Acuña
+    </a>
 
-    <ul class="menu">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#libros">Libros</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+    <button
+      class="menu-boton"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="menu-principal" class="menu-principal" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#libros">Libros</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
   <main>
-    <section class="inicio" id="inicio">
-      <div class="inicio-contenido">
-        <p class="inicio-etiqueta">Fantasía romántica juvenil</p>
+    <section class="hero" id="inicio">
+      <div class="hero-ornamento hero-ornamento-izquierda" aria-hidden="true"></div>
+      <div class="hero-ornamento hero-ornamento-derecha" aria-hidden="true"></div>
+
+      <div class="hero-contenido aparecer">
+        <p class="eyebrow">Fantasía romántica juvenil</p>
+
         <h1>Noelia Acuña</h1>
 
-        <p class="inicio-texto">
-          Historias de magia, amor y mundos donde cada decisión
-          puede cambiarlo todo.
+        <p class="hero-frase">
+          Historias donde la magia, el amor y el destino
+          transforman reinos enteros.
         </p>
 
-        <a class="boton" href="#libros">Descubrir mis libros</a>
+        <a class="boton" href="#libros">
+          Descubrir mis libros
+        </a>
+      </div>
+
+      <div class="silueta-castillo" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </section>
 
-    <section class="libros" id="libros">
-      <h2 class="seccion-titulo">Mis libros</h2>
-
-      <p class="seccion-introduccion">
-        Descubre la historia de Delaira en español y en inglés.
-      </p>
+    <section class="seccion libros" id="libros">
+      <div class="encabezado-seccion aparecer">
+        <p class="eyebrow">Historias publicadas</p>
+        <h2>Mis libros</h2>
+        <div class="separador-daga" aria-hidden="true"></div>
+        <p>
+          Descubre la historia de Delaira en sus ediciones
+          en español y en inglés.
+        </p>
+      </div>
 
       <div class="lista-libros">
-        <article class="libro">
+        <article class="libro aparecer">
           <div class="marco-portada">
             <img
               src="images/cuento-de-lirios.png"
-              alt="Mockup de la novela Cuento de Lirios, de Noelia Acuña Perdomo"
+              alt="Mockup de Cuento de Lirios, de Noelia Acuña Perdomo"
             >
           </div>
 
-          <div class="libro-info">
-            <p class="libro-idioma">Edición en español</p>
+          <div class="libro-contenido">
+            <p class="eyebrow">Edición en español</p>
             <h3>Cuento de Lirios</h3>
 
             <div class="sinopsis">
               <p>
-                Delaira tiene veinte años y un pasado del que lleva
-                demasiado tiempo intentando huir. Cuando participa en un
-                sorteo que promete cambiar su vida, cree que por fin tendrá
-                la oportunidad de dejar atrás su pequeño y tranquilo pueblo
-                pesquero.
+                Delaira tiene veinte años y un pasado del que lleva demasiado
+                tiempo intentando huir. Cuando participa en un sorteo que
+                promete cambiar su vida, cree que por fin tendrá la oportunidad
+                de dejar atrás su pequeño y tranquilo pueblo pesquero.
               </p>
 
               <p>
-                Pero lo que la espera al otro lado es mucho más peligroso de
-                lo que imaginaba: rebeldes dispuestos a todo, una princesa
+                Pero lo que la espera al otro lado es mucho más peligroso de lo
+                que imaginaba: rebeldes dispuestos a todo, una princesa
                 caprichosa y un entramado de conspiraciones que la arrastrarán
                 a un mundo donde nada es lo que parece.
               </p>
 
               <p>
-                En medio del caos aparece él, un chico de ojos color caramelo
-                y un nombre tan escurridizo como el viento, que la guiará
-                hacia una verdad imposible de ignorar… y hacia una magia que
-                supera cualquier cuento de su infancia.
+                En medio del caos aparece él, un chico de ojos color caramelo y
+                un nombre tan escurridizo como el viento, que la guiará hacia
+                una verdad imposible de ignorar… y hacia una magia que supera
+                cualquier cuento de su infancia.
               </p>
 
               <p>
                 Porque cuando la verdad y la mentira comienzan a confundirse,
                 Delaira tendrá que decidir en quién confiar. Mientras antiguos
-                poderes despiertan, descubrirá que su destino podría cambiar
-                no solo su vida… sino el futuro de todo un reino.
+                poderes despiertan, descubrirá que su destino podría cambiar no
+                solo su vida… sino el futuro de todo un reino.
               </p>
             </div>
 
-            <blockquote class="cita">
+            <blockquote>
               «El infierno es verde esmeralda.»
             </blockquote>
 
@@ -507,32 +144,31 @@
           </div>
         </article>
 
-        <article class="libro">
+        <article class="libro libro-invertido aparecer">
           <div class="marco-portada">
             <img
               src="images/tale-of-lilies.png"
-              alt="Mockup of the novel Tale of Lilies by Noelia Acuña Perdomo"
+              alt="Mockup of Tale of Lilies by Noelia Acuña Perdomo"
             >
           </div>
 
-          <div class="libro-info">
-            <p class="libro-idioma">English edition</p>
+          <div class="libro-contenido">
+            <p class="eyebrow">English edition</p>
             <h3>Tale of Lilies</h3>
 
             <div class="sinopsis">
               <p>
-                When twenty-year-old Delaira enters a life-changing raffle,
-                she seeks not only escape from her haunting past but also a
-                glimpse beyond her quiet fishing village.
+                When twenty-year-old Delaira enters a life-changing raffle, she
+                seeks not only escape from her haunting past but also a glimpse
+                beyond her quiet fishing village.
               </p>
 
               <p>
-                What she finds instead shatters expectations: dangerous
-                rebels, a capricious princess, and political schemes drawing
-                her into a journey she never imagined. At its core is a boy
-                with caramel eyes and a name as elusive as the wind, leading
-                her into a world where magic transcends her mother’s bedtime
-                tales.
+                What she finds instead shatters expectations: dangerous rebels,
+                a capricious princess, and political schemes drawing her into a
+                journey she never imagined. At its core is a boy with caramel
+                eyes and a name as elusive as the wind, leading her into a world
+                where magic transcends her mother’s bedtime tales.
               </p>
 
               <p>
@@ -544,11 +180,9 @@
               </p>
             </div>
 
-            <blockquote class="cita">
+            <blockquote>
               “Once upon a time, when the sun was emerald and the moon its
-              companion, the world thrived in enchanting harmony. Earth was
-              the shared realm of Goddesses and humans alike, a tapestry
-              woven by magic and love.”
+              companion, the world thrived in enchanting harmony.”
             </blockquote>
 
             <a
@@ -564,17 +198,19 @@
       </div>
     </section>
 
-    <section class="sobre-mi" id="sobre-mi">
+    <section class="seccion sobre-mi" id="sobre-mi">
       <div class="sobre-grid">
-        <img
-          class="foto-autora"
-          src="images/noelia-acuna.jpg"
-          alt="Fotografía de la autora Noelia Acuña Perdomo"
-        >
+        <div class="foto-marco aparecer">
+          <img
+            src="images/noelia-acuna.jpg"
+            alt="Fotografía de la autora Noelia Acuña Perdomo"
+          >
+        </div>
 
-        <div class="sobre-texto">
-          <p class="sobre-etiqueta">La autora</p>
-          <h2>Sobre mí</h2>
+        <div class="sobre-contenido aparecer">
+          <p class="eyebrow">La autora</p>
+          <h2>De Lanzarote a los mundos que imagina</h2>
+          <div class="separador-daga separador-izquierda" aria-hidden="true"></div>
 
           <p>
             Noelia Acuña Perdomo es conejera, nacida y criada en Lanzarote,
@@ -606,26 +242,36 @@
             mano de Algani Editorial bajo el título <em>Cuento de Lirios</em>.
           </p>
 
-          <p>
-            Cuando no está escribiendo, es fácil encontrarla enfrascada en un
-            buen libro, tomando café en su cafetería de siempre o en su clase
-            de ballet, donde el entusiasmo suele superar con creces a la
-            técnica.
-          </p>
+          <div class="nota-personal">
+            <h3>Cuando no está escribiendo…</h3>
+            <p>
+              Es fácil encontrarla enfrascada en un buen libro, tomando café
+              en su cafetería de siempre o en su clase de ballet, donde el
+              entusiasmo suele superar con creces a la técnica.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="contacto" id="contacto">
-      <div class="contacto-contenido">
-        <h2 class="seccion-titulo">Contacto</h2>
+    <section class="seccion contacto" id="contacto">
+      <div class="contacto-tarjeta aparecer">
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos</h2>
+        <div class="separador-daga" aria-hidden="true"></div>
 
-        <p class="seccion-introduccion">
-          Para consultas profesionales, prensa, eventos y colaboraciones.
+        <p>
+          Gracias por visitar mi pequeño rincón.
         </p>
 
-        <a class="boton" href="mailto:noelia.aper@gmail.com">
-          Escribirme
+        <p>
+          Si eres lector, librero, periodista, creador de contenido o
+          simplemente quieres compartir conmigo tu experiencia con mis
+          novelas, estaré encantada de leerte.
+        </p>
+
+        <a class="correo-visible" href="mailto:noelia.aper@gmail.com">
+          noelia.aper@gmail.com
         </a>
 
         <div class="redes">
