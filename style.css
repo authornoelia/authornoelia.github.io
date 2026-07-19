@@ -214,3 +214,10 @@ footer p { font-size: .8rem; }
   .contacto-tarjeta { padding: 54px 24px; }
   .redes { flex-direction: column; gap: 10px; }
 }
+
+.botones-libro {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
