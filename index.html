@@ -50,42 +50,47 @@
 
   <main>
     <section class="hero" id="inicio">
-      <svg class="filigrana filigrana-superior-izquierda" viewBox="0 0 260 260" aria-hidden="true">
-        <path d="M18 214C26 132 64 68 136 30c32-17 70-18 106-7-29 4-53 17-70 39-16 20-22 44-19 71 3 28-6 51-28 69-22 18-49 24-80 18 23-5 41-16 53-34 12-18 15-39 9-62-6-21-1-40 14-57-33 16-56 41-68 75-11 32-10 66 3 101"/>
-        <path d="M62 180c31-14 53-37 67-69M88 201c27-10 48-27 63-52M112 88c-20-2-37 4-51 18M147 55c-17-7-33-6-48 3"/>
-        <path d="M71 151c-20-7-38-2-53 14M111 119c-18-8-35-6-49 7M133 91c-13-9-28-10-43-3"/>
-      </svg>
+      <div class="fases-lunares fases-lunares-izquierda" aria-hidden="true">
+        <span class="luna luna-nueva"></span>
+        <span class="luna luna-creciente"></span>
+        <span class="luna luna-cuarto"></span>
+        <span class="luna luna-gibosa"></span>
+        <span class="luna luna-llena"></span>
+      </div>
 
-      <svg class="filigrana filigrana-inferior-derecha" viewBox="0 0 260 260" aria-hidden="true">
-        <path d="M18 214C26 132 64 68 136 30c32-17 70-18 106-7-29 4-53 17-70 39-16 20-22 44-19 71 3 28-6 51-28 69-22 18-49 24-80 18 23-5 41-16 53-34 12-18 15-39 9-62-6-21-1-40 14-57-33 16-56 41-68 75-11 32-10 66 3 101"/>
-        <path d="M62 180c31-14 53-37 67-69M88 201c27-10 48-27 63-52M112 88c-20-2-37 4-51 18M147 55c-17-7-33-6-48 3"/>
-        <path d="M71 151c-20-7-38-2-53 14M111 119c-18-8-35-6-49 7M133 91c-13-9-28-10-43-3"/>
-      </svg>
+      <div class="fases-lunares fases-lunares-derecha" aria-hidden="true">
+        <span class="luna luna-llena"></span>
+        <span class="luna luna-gibosa luna-invertida"></span>
+        <span class="luna luna-cuarto luna-invertida"></span>
+        <span class="luna luna-creciente luna-invertida"></span>
+        <span class="luna luna-nueva"></span>
+      </div>
+
+      <div class="estrellas-volantes" aria-hidden="true">
+        <span style="--x:10%;--y:24%;--d:8s;--delay:-2s;--s:.8">✦</span>
+        <span style="--x:22%;--y:72%;--d:11s;--delay:-6s;--s:.55">✧</span>
+        <span style="--x:34%;--y:18%;--d:9s;--delay:-4s;--s:.45">✦</span>
+        <span style="--x:68%;--y:22%;--d:12s;--delay:-8s;--s:.6">✧</span>
+        <span style="--x:78%;--y:69%;--d:10s;--delay:-3s;--s:.75">✦</span>
+        <span style="--x:90%;--y:35%;--d:13s;--delay:-7s;--s:.45">✧</span>
+      </div>
 
       <div class="hero-contenido aparecer">
         <p class="eyebrow">Fantasía romántica juvenil</p>
-
         <h1>Noelia Acuña</h1>
-
         <p class="hero-frase">
           Historias donde la magia, el amor y el destino
           transforman reinos enteros.
         </p>
-
-        <a class="boton" href="#libros">
-          Descubre mis libros
-        </a>
+        <a class="boton" href="#libros">Descubre mis libros</a>
       </div>
 
       <div class="hero-remate" aria-hidden="true">
         <span></span>
-        <svg viewBox="0 0 90 180" role="presentation">
-          <circle cx="45" cy="18" r="7"/>
-          <path d="M45 25v31"/>
-          <path d="M13 62c13 8 22 9 32 0 10 9 19 8 32 0"/>
-          <path d="M45 58v96"/>
-          <path d="M45 154l-9-20h18z"/>
-          <path d="M24 61c5-8 12-12 21-12M66 61c-5-8-12-12-21-12"/>
+        <svg viewBox="0 0 28 52">
+          <path d="M14 2L18 8L16 12L18 15L14 19L10 15L12 12L10 8Z"/>
+          <path d="M5 20H23M8 17L5 20L8 23M20 17L23 20L20 23"/>
+          <path d="M14 20V47M10 47H18M12 50H16"/>
         </svg>
         <span></span>
       </div>
@@ -97,13 +102,10 @@
         <h2>Mis libros</h2>
         <div class="separador-daga" aria-hidden="true">
           <span></span>
-          <svg viewBox="0 0 90 180" role="presentation">
-            <circle cx="45" cy="18" r="7"/>
-            <path d="M45 25v31"/>
-            <path d="M13 62c13 8 22 9 32 0 10 9 19 8 32 0"/>
-            <path d="M45 58v96"/>
-            <path d="M45 154l-9-20h18z"/>
-            <path d="M24 61c5-8 12-12 21-12M66 61c-5-8-12-12-21-12"/>
+          <svg viewBox="0 0 28 52">
+            <path d="M14 2L18 8L16 12L18 15L14 19L10 15L12 12L10 8Z"/>
+            <path d="M5 20H23M8 17L5 20L8 23M20 17L23 20L20 23"/>
+            <path d="M14 20V47M10 47H18M12 50H16"/>
           </svg>
           <span></span>
         </div>
@@ -237,7 +239,15 @@
         <div class="sobre-contenido aparecer">
           <p class="eyebrow">La autora</p>
           <h2>De Lanzarote a los mundos que imagina</h2>
-          <div class="separador-daga separador-izquierda" aria-hidden="true"></div>
+          <div class="separador-daga separador-izquierda" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 28 52">
+            <path d="M14 2L18 8L16 12L18 15L14 19L10 15L12 12L10 8Z"/>
+            <path d="M5 20H23M8 17L5 20L8 23M20 17L23 20L20 23"/>
+            <path d="M14 20V47M10 47H18M12 50H16"/>
+          </svg>
+          <span></span>
+        </div>
 
           <p>
             Noelia Acuña Perdomo es conejera, nacida y criada en Lanzarote,
@@ -287,13 +297,10 @@
         <h2>Hablemos</h2>
         <div class="separador-daga" aria-hidden="true">
           <span></span>
-          <svg viewBox="0 0 90 180" role="presentation">
-            <circle cx="45" cy="18" r="7"/>
-            <path d="M45 25v31"/>
-            <path d="M13 62c13 8 22 9 32 0 10 9 19 8 32 0"/>
-            <path d="M45 58v96"/>
-            <path d="M45 154l-9-20h18z"/>
-            <path d="M24 61c5-8 12-12 21-12M66 61c-5-8-12-12-21-12"/>
+          <svg viewBox="0 0 28 52">
+            <path d="M14 2L18 8L16 12L18 15L14 19L10 15L12 12L10 8Z"/>
+            <path d="M5 20H23M8 17L5 20L8 23M20 17L23 20L20 23"/>
+            <path d="M14 20V47M10 47H18M12 50H16"/>
           </svg>
           <span></span>
         </div>
