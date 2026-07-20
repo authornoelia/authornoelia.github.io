@@ -390,5 +390,41 @@
 <footer>
 <p>© 2026 Noelia Acuña Perdomo. Todos los derechos reservados.</p>
 </footer>
+
+      <script>
+  const carruselEventos = document.querySelector(".eventos-carrusel");
+  const botonAnterior = document.querySelector(".evento-anterior");
+  const botonSiguiente = document.querySelector(".evento-siguiente");
+
+  if (carruselEventos && botonAnterior && botonSiguiente) {
+    function obtenerDesplazamiento() {
+      const tarjeta = carruselEventos.querySelector(".evento-tarjeta");
+
+      if (!tarjeta) {
+        return 0;
+      }
+
+      const estilos = window.getComputedStyle(carruselEventos);
+      const espacio = parseFloat(estilos.gap) || 0;
+
+      return tarjeta.offsetWidth + espacio;
+    }
+
+    botonSiguiente.addEventListener("click", function () {
+      carruselEventos.scrollBy({
+        left: obtenerDesplazamiento(),
+        behavior: "smooth"
+      });
+    });
+
+    botonAnterior.addEventListener("click", function () {
+      carruselEventos.scrollBy({
+        left: -obtenerDesplazamiento(),
+        behavior: "smooth"
+      });
+    });
+  }
+</script>
+      
 </body>
 </html>
