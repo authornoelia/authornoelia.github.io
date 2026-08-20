@@ -392,8 +392,8 @@ footer p { font-size: .8rem; }
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-right: auto;
-  margin-left: 14px;
+  margin-left: 12px;
+  margin-right: 0;
 }
 
 .redes-cabecera a {
@@ -425,10 +425,10 @@ footer p { font-size: .8rem; }
 /* En móvil: mantener las redes junto al nombre */
 @media (max-width: 768px) {
   .redes-cabecera {
-    margin-left: 8px;
-    margin-right: auto;
-    gap: 4px;
-  }
+  margin-left: 8px;
+  margin-right: 0;
+  gap: 4px;
+}
 
   .redes-cabecera a {
     width: 25px;
