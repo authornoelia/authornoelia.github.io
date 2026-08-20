@@ -391,23 +391,25 @@ footer p { font-size: .8rem; }
 .redes-cabecera {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  margin-right: auto;
+  margin-left: 14px;
 }
 
 .redes-cabecera a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   color: inherit;
   text-decoration: none;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .redes-cabecera svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.7;
@@ -418,4 +420,23 @@ footer p { font-size: .8rem; }
 .redes-cabecera a:hover {
   transform: translateY(-2px);
   opacity: 0.65;
+}
+
+/* En móvil: mantener las redes junto al nombre */
+@media (max-width: 768px) {
+  .redes-cabecera {
+    margin-left: 8px;
+    margin-right: auto;
+    gap: 4px;
+  }
+
+  .redes-cabecera a {
+    width: 25px;
+    height: 25px;
+  }
+
+  .redes-cabecera svg {
+    width: 16px;
+    height: 16px;
+  }
 }
