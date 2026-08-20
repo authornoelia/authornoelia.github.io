@@ -31,11 +31,15 @@ a { color: inherit; }
 
 .cabecera {
   align-items: center; backdrop-filter: blur(15px); background: rgba(255,253,249,.88);
-  border-bottom: 1px solid var(--borde); display: flex; justify-content: space-between;
+  border-bottom: 1px solid var(--borde); display: flex; justify-content: flex-start;
   left: 0; padding: 15px 7%; position: fixed; right: 0; top: 0; z-index: 1000;
 }
 .logo { color: var(--ciruela); font-family: "Cormorant Garamond", serif; font-size: 1.58rem; font-weight: 600; text-decoration: none; }
-.menu-principal { display: flex; gap: 30px; }
+.menu-principal {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
 .menu-principal a { font-size: .73rem; letter-spacing: .15em; position: relative; text-decoration: none; text-transform: uppercase; }
 .menu-principal a::after { background: var(--lila-oscuro); bottom: -7px; content: ""; height: 1px; left: 50%; position: absolute; transform: translateX(-50%) scaleX(0); transition: transform .25s ease; width: 100%; }
 .menu-principal a:hover { color: var(--lila-oscuro); }
