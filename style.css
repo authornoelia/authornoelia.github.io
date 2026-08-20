@@ -443,4 +443,8 @@ footer p { font-size: .8rem; }
     width: 19px;
     height: 19px;
   }
+
+  .menu-boton {
+    margin-left: auto;
+  }
 }
