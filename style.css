@@ -448,3 +448,87 @@ footer p { font-size: .8rem; }
     margin-left: auto;
   }
 }
+
+
+/* SELECTOR DE IDIOMA ES | EN */
+
+.selector-idioma {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 24px;
+  flex-shrink: 0;
+}
+
+.selector-idioma button {
+  background: transparent;
+  border: none;
+  padding: 6px 5px;
+  color: var(--texto-suave);
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.selector-idioma button:hover {
+  color: var(--lila-oscuro);
+}
+
+.selector-idioma button[aria-pressed="true"] {
+  color: var(--ciruela);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--lila);
+  text-underline-offset: 5px;
+}
+
+/* TABLET Y MÓVIL */
+
+@media (max-width: 880px) {
+  .selector-idioma {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .menu-boton {
+    margin-left: auto;
+    order: 2;
+  }
+
+  .selector-idioma {
+    order: 1;
+  }
+}
+
+/* MÓVILES PEQUEÑOS */
+
+@media (max-width: 480px) {
+  .cabecera {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .logo {
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+
+  .selector-idioma {
+    margin-left: auto;
+    margin-right: 8px;
+    gap: 2px;
+  }
+
+  .selector-idioma button {
+    font-size: 0.68rem;
+    padding: 5px 3px;
+  }
+
+  .menu-boton {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+}
