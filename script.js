@@ -127,7 +127,13 @@ const traducciones = {
     t50: "Thank you for visiting my little corner of the world.",
     t51: "If you'd like to get in touch, I'd be delighted to hear from you.",
 
-    t52: "© 2026 Noelia Acuña Perdomo. All rights reserved."
+    
+t52: "© 2026 Noelia Acuña Perdomo. All rights reserved.",
+
+t53: "October 2026",
+t54: "La Laguna Book Fair",
+t55: "San Cristóbal de La Laguna, Tenerife"
+
   }
 };
 
