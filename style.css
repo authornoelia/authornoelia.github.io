@@ -532,12 +532,3 @@ footer p { font-size: .8rem; }
     flex-shrink: 0;
   }
 }
-
-
-/* PRUEBA TEMPORAL: mostrar las secciones ocultas */
-.aparecer {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-}
-
