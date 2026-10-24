@@ -617,3 +617,60 @@ footer p { font-size: .8rem; }
     object-fit: cover;
   }
 }
+
+/* ESTRELLAS DECORATIVAS DEL RETRATO */
+
+.sobre-mi .foto-marco {
+  position: relative;
+  overflow: visible;
+}
+
+.sobre-mi .estrella-retrato {
+  position: absolute;
+  display: block;
+  font-family: Georgia, serif;
+  line-height: 1;
+  color: #ad83c3;
+  pointer-events: none;
+  z-index: 5;
+  text-shadow: 0 0 12px rgba(173, 131, 195, 0.25);
+}
+
+.sobre-mi .estrella-retrato-superior {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 46px;
+  color: #8e69a0;
+}
+
+.sobre-mi .estrella-retrato-izquierda {
+  top: 42%;
+  left: -35px;
+  font-size: 25px;
+  opacity: 0.75;
+}
+
+.sobre-mi .estrella-retrato-derecha {
+  top: 30%;
+  right: -35px;
+  font-size: 34px;
+  opacity: 0.85;
+}
+
+@media (max-width: 540px) {
+  .sobre-mi .estrella-retrato-superior {
+    top: -24px;
+    font-size: 36px;
+  }
+
+  .sobre-mi .estrella-retrato-izquierda {
+    left: -12px;
+    font-size: 19px;
+  }
+
+  .sobre-mi .estrella-retrato-derecha {
+    right: -12px;
+    font-size: 24px;
+  }
+}
