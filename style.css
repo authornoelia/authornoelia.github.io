@@ -553,14 +553,14 @@ footer p { font-size: .8rem; }
 
 /* Dagas de libros, sobre mí y contacto */
 .separador-daga {
-  height: 120px;
-  width: 250px;
+  height: 145px;
+  width: 300px;
 }
 
 .separador-daga .daga-nueva {
   display: block;
-  width: 65px;
-  height: 115px;
+  width: 80px;
+  height: 140px;
   object-fit: contain;
   flex: 0 0 auto;
 }
