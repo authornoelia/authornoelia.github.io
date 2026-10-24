@@ -532,3 +532,24 @@ footer p { font-size: .8rem; }
     flex-shrink: 0;
   }
 }
+
+
+/* NUEVA DAGA DECORATIVA */
+
+/* Daga de la portada */
+.hero-remate .daga-nueva {
+  display: block;
+  width: 28px;
+  height: 48px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+/* Dagas de libros, sobre mí y contacto */
+.separador-daga .daga-nueva {
+  display: block;
+  width: 25px;
+  height: 43px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
