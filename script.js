@@ -133,6 +133,10 @@ t53: "October 2026",
 t54: "La Laguna Book Fair",
 t55: "San Cristóbal de La Laguna, Tenerife"
 
+t56: "October 2026",
+t57: "Book Signing at Arangaybo Bookshop",
+t58: "Las Palmas de Gran Canaria · 24 October 2026"
+
   }
 };
 
