@@ -131,7 +131,7 @@ const traducciones = {
 t52: "© 2026 Noelia Acuña Perdomo. All rights reserved.",
 t53: "October 2026",
 t54: "La Laguna Book Fair",
-t55: "San Cristóbal de La Laguna, Tenerife"
+t55: "San Cristóbal de La Laguna, Tenerife",
 
 t56: "October 2026",
 t57: "Book Signing at Arangaybo Bookshop",
