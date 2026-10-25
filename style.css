@@ -674,3 +674,67 @@ footer p { font-size: .8rem; }
     font-size: 24px;
   }
 }
+
+
+/* ESTRELLAS MÁGICAS ANIMADAS DEL RETRATO */
+
+@keyframes estrellaMagicaRetrato {
+  0%, 100% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateY(-12px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* Las estrellas flotan y brillan */
+.sobre-mi .estrella-retrato {
+  animation: estrellaMagicaRetrato 4s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Cada estrella tiene su propio ritmo */
+.sobre-mi .estrella-retrato-superior {
+  animation-duration: 4.5s;
+  animation-delay: 0s;
+}
+
+.sobre-mi .estrella-retrato-izquierda {
+  animation-duration: 3.7s;
+  animation-delay: -1.5s;
+}
+
+.sobre-mi .estrella-retrato-derecha {
+  animation-duration: 5.2s;
+  animation-delay: -2.8s;
+}
+
+/* Respetar la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .sobre-mi .estrella-retrato {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+
+
+/* Mantener centrada la estrella superior al animarse */
+@keyframes estrellaCentralMagica {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) scale(0.85);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-12px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.sobre-mi .estrella-retrato-superior {
+  animation-name: estrellaCentralMagica;
+}
